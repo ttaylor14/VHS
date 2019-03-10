@@ -1,3 +1,5 @@
+CREATE DATABASE VHS;
+
 CREATE TABLE Customer
 (
   CustomerID      INTEGER,
