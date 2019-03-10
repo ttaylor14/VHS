@@ -12,3 +12,9 @@ CREATE TABLE Membership
   StartDate         TEXT,
   EndDate         TEXT
 );
+
+CREATE TABLE Billing
+(
+  CustomerID    INTEGER
+);
+
