@@ -1,5 +1,8 @@
 CREATE DATABASE VHS;
 
+--More things updated here in this SQL file.
+--Quite the structured language.
+
 CREATE TABLE Customer
 (
   CustomerID      INTEGER,
