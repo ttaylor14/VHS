@@ -44,7 +44,7 @@ CREATE TABLE Movie
 
 CREATE TABLE Customer_History
 (
-  MovieID         INTEGER
+  MovieID         INTEGER,
   DatePurchased   Date,
   ThemeID         INTEGER,
   Price           Real
