@@ -8,6 +8,8 @@ CREATE TABLE Customer
   Address         TEXT
 );
 
+--Updated124
+
 CREATE TABLE Membership
 (
   CustomerID      INTEGER,
@@ -39,8 +41,8 @@ CREATE TABLE Movie
 
 CREATE TABLE Customer_History
 (
-  MovieID    INTEGER
-  DatePurchased Date,
-  ThemeID     INTEGER,
-  Price       Real
+  MovieID         INTEGER
+  DatePurchased   Date,
+  ThemeID         INTEGER,
+  Price           Real
 );
