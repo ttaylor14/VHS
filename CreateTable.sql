@@ -1,6 +1,14 @@
+-- VHS Database
 
---More things updated here in this SQL file.
---Quite the structured language.
+-- Created March 11, 2019
+-- by: Emily Davis, Todd Taylor, Thomas Townsley
+
+
+
+
+  -- Customer Table
+
+
 
 CREATE TABLE Customer
 (
@@ -26,8 +34,17 @@ CREATE TABLE Customer
 			ON DELETE SET NULL		ON UPDATE CASCADE
 );
 
+
+
+
+  -- Membership Table
+
+
+
+
 CREATE TABLE Membership
 (
+  Subscription_ID INTEGER UNIQUE,
   CustomerID      INTEGER,
   ThemeID         INTEGER,
   StartDate       varchar(50),
@@ -35,19 +52,39 @@ CREATE TABLE Membership
   PricePYR        REAL,
   PricePMO        REAL,
 
+	CONSTRAINT SUBID
+		PRIMARY KEY (Subscription_ID),
+
   CONSTRAINT CUSTID_Mem
 		FOREIGN KEY (CustomerID) REFERENCES Customer(CustomerID)
+			ON DELETE SET NULL		ON UPDATE CASCADE,
+
+  CONSTRAINT ThemeID_Mem
+		FOREIGN KEY (ThemeID) REFERENCES Theme(ThemeID)
 			ON DELETE SET NULL		ON UPDATE CASCADE
+
 
 );
 
+
+
+
+  -- Billing Table
+
+
+
+
 CREATE TABLE Billing
 (
+  BillingNumber   INTEGER UNIQUE,
   CustomerID      INTEGER,
   PaymentMethod   varchar(50),
   BillingCycle    varchar(50),
   PaymentStatus   varchar(50),
   CurrentBalance  REAL,
+
+	CONSTRAINT BillingID
+		PRIMARY KEY (BillingNumber),
 
 
   CONSTRAINT CUSTID_Bill
@@ -55,6 +92,16 @@ CREATE TABLE Billing
 			ON DELETE SET NULL		ON UPDATE CASCADE
 
 );
+
+
+
+
+
+  -- Movie Table
+
+
+
+
 
 CREATE TABLE Movie
 (
@@ -64,18 +111,53 @@ CREATE TABLE Movie
   MovieDirector   varchar(50),
   ThemeID         INTEGER,
 
-  	CONSTRAINT MOVID
-		PRIMARY KEY (MovieID)
+  CONSTRAINT MOVID
+		PRIMARY KEY (MovieID),
+
+  CONSTRAINT ThemeID_Mov
+		FOREIGN KEY (ThemeID) REFERENCES Theme(ThemeID)
+			ON DELETE SET NULL		ON UPDATE CASCADE
+
 
 );
 
 
+
+  -- Theme Table
+
+
+
+CREATE TABLE Theme
+(
+  ThemeID         INTEGER UNIQUE,
+  ThemeName       varchar(50),
+
+  	CONSTRAINT THEME_ID
+		PRIMARY KEY (ThemeID)
+
+);
+
+
+
+
+  -- Customer_History Table
+
+
+
+
 CREATE TABLE Customer_History
 (
+  CustomerID      INTEGER,
   MovieID         INTEGER,
   DatePurchased   Date,
   ThemeID         INTEGER,
   Price           Real,
+
+
+  CONSTRAINT CUSTID_CustHist
+		FOREIGN KEY (CustomerID) REFERENCES Customer(CustomerID)
+			ON DELETE SET NULL		ON UPDATE CASCADE,
+
 
   CONSTRAINT MOVID_CustHist
 		FOREIGN KEY (MovieID) REFERENCES Movie(MovieID)
@@ -83,10 +165,18 @@ CREATE TABLE Customer_History
 
 
   CONSTRAINT ThemeID_CustHist
-		FOREIGN KEY (ThemeID) REFERENCES Movie(ThemeID)
+		FOREIGN KEY (ThemeID) REFERENCES Theme(ThemeID)
 			ON DELETE SET NULL		ON UPDATE CASCADE
 
+
 );
+
+
+
+
+  -- State_ID Table
+
+
 
 
 CREATE TABLE State_ID
@@ -99,6 +189,13 @@ CREATE TABLE State_ID
 		PRIMARY KEY (StateID),
 
 );
+
+
+
+  -- Country_ID Table
+
+
+
 
 CREATE TABLE Country_ID
 (

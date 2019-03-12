@@ -1,13 +1,27 @@
 
-INSERT INTO Customer
-  ( CustomerID, NameF, NameL, Address )
-VALUES
-  ('John', 123, 'Lloyds Office'),
-  ('Miranda', 126, 'Bristol Office');
+-- Customer Table
 
+INSERT INTO Customer
+  ( NameF, NameL, AddressLine1, AddressLine2, City, Zipcode, StateID, CountryID )
+VALUES
+  ( 'John', 'Smith', '123 Long Way', '', 'Nashville', '37011', '42', '188' );
+
+
+-- Membership Table
+
+INSERT INTO Customer
+  ( CustomerID, ThemeID, StartDate, EndDate, PricePYR, PricePMO )
+VALUES
+  ( '1', '1', '1', '1', '1.08', '15' );
+
+
+
+
+
+  -- STATE Table
 
 INSERT INTO State
-  (   StateName, StateAbbreviation )
+  (  StateName, StateAbbreviation )
 VALUES
   ('Alabama', 'AL'),
   ('Alaska', 'AK'),
@@ -61,8 +75,11 @@ VALUES
   ('Wyoming', 'WY');
 
 
+  -- Country Table
+
+
 INSERT INTO Country
-  (   CountryName )
+  (  CountryName )
 VALUES
   ('Afghanistan'),
   ('Albania'),
