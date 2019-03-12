@@ -74,12 +74,11 @@ VALUES
 INSERT INTO Customer_History
   ( CustomerID, MovieID, DatePurchased, ThemeID, Price )
 VALUES
-  ( '1', '1', '', '1', '1.08', '' ), -- Extra Attribute
-  ( '1', '1', '', '1' ), -- One Less Attribute
-  ( '1', '1', '', '1', 'TOO' ), -- CHAR IN INT ONLY - Price
-  ( '1', '1', '', 'A', '1.08' ), -- CHAR IN INT ONLY - ThemeID
-  ( '1', 'B', '', '1', '1.08' ), -- CHAR IN INT ONLY - MovieID
-  ( 'C', '1', '', '1', '1.08' ); -- CHAR IN INT ONLY - CUstomerID
+  ( '1', '1', '', '1.08', '' ), -- Extra Attribute
+  ( '1', '1', '' ), -- One Less Attribute
+  ( '1', '1', '', 'TOO' ), -- CHAR IN INT ONLY - Price
+  ( '1', 'B', '', '1.08' ), -- CHAR IN INT ONLY - MovieID
+  ( 'C', '1', '', '1.08' ); -- CHAR IN INT ONLY - CUstomerID
 
 
 
