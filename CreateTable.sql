@@ -1,3 +1,5 @@
+DELETE Customer;
+
 CREATE DATABASE VHS;
 
 --More things updated here in this SQL file.
@@ -5,40 +7,69 @@ CREATE DATABASE VHS;
 
 CREATE TABLE Customer
 (
-  CustomerID      INTEGER,
-  NameF           TEXT,
-  NameL           TEXT,
-  Address         TEXT
-);
+  CustomerID      INTEGER UNIQUE,
+  NameF           varchar(50),
+  NameL           varchar(50),
+  AddressLine1    varchar(255), 
+  AddressLine2    varchar(255),
+  City            varchar(50),
+  ZipCode         INTEGER, 
+  StateID         INTEGER,  -- FK to StateID table
+  CountryID       INTEGER,  -- FK to CountryID table
 
---Updated124
+	CONSTRAINT CUSTID
+		PRIMARY KEY (CustomerID),
+
+  CONSTRAINT State
+		FOREIGN KEY (StateID) REFERENCES State(StateID)
+			ON DELETE SET NULL		ON UPDATE CASCADE,
+
+  CONSTRAINT Country
+		FOREIGN KEY (CountryID) REFERENCES State(CountryID)
+			ON DELETE SET NULL		ON UPDATE CASCADE
+);
 
 CREATE TABLE Membership
 (
   CustomerID      INTEGER,
   ThemeID         INTEGER,
-  StartDate       TEXT,
-  EndDate         TEXT,
+  StartDate       varchar(50),
+  EndDate         varchar(50),
   PricePYR        REAL,
-  PricePMO        REAL
+  PricePMO        REAL,
+
+  CONSTRAINT CUSTID_Mem
+		FOREIGN KEY (CustomerID) REFERENCES Customer(CustomerID)
+			ON DELETE SET NULL		ON UPDATE CASCADE
+
 );
 
 CREATE TABLE Billing
 (
   CustomerID      INTEGER,
-  PaymentMethod   TEXT,
-  BillingCycle    TEXT,
-  PaymentStatus   TEXT,
+  PaymentMethod   varchar(50),
+  BillingCycle    varchar(50),
+  PaymentStatus   varchar(50),
   CurrentBalance  REAL,
+
+
+  CONSTRAINT CUSTID_Bill
+		FOREIGN KEY (CustomerID) REFERENCES Customer(CustomerID)
+			ON DELETE SET NULL		ON UPDATE CASCADE
 
 );
 
 CREATE TABLE Movie
 (
-  MovieID         INTEGER,
-  MovieName       TEXT,
+  MovieID         INTEGER UNIQUE,
+  MovieName       varchar(50),
   ReleaseDate     Date,
-  MovieDirector   TEXT
+  MovieDirector   varchar(50),
+  ThemeID         INTEGER,
+
+  	CONSTRAINT MOVID
+		PRIMARY KEY (MovieID)
+
 );
 
 
@@ -47,5 +78,37 @@ CREATE TABLE Customer_History
   MovieID         INTEGER,
   DatePurchased   Date,
   ThemeID         INTEGER,
-  Price           Real
+  Price           Real,
+
+  CONSTRAINT MOVID_CustHist
+		FOREIGN KEY (MovieID) REFERENCES Movie(MovieID)
+			ON DELETE SET NULL		ON UPDATE CASCADE,
+
+
+  CONSTRAINT ThemeID_CustHist
+		FOREIGN KEY (ThemeID) REFERENCES Movie(ThemeID)
+			ON DELETE SET NULL		ON UPDATE CASCADE
+
+);
+
+
+CREATE TABLE State
+(
+  StateID                 INTEGER Unique,
+  StateName               varchar(50),
+  StateAbbreviation       varchar(2),
+
+	CONSTRAINT StateID
+		PRIMARY KEY (StateID),
+
+);
+
+CREATE TABLE Country
+(
+  CountryID         INTEGER Unique,
+  CountryName       varchar(50),
+
+	CONSTRAINT CountryID
+		PRIMARY KEY (CountryID),
+
 );
