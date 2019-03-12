@@ -81,7 +81,7 @@ VALUES
   ( 'Harry The King', '', 'Mr. Max Castle', '1' ),
   ( 'Lost Chickens', '', 'Ms. Kindle Swift', '3' ),
   ( 'Cast Away', '', 'Mrs. Kaylee Espinoza', '2' ),
-  ( 'Good Night', '', 'Ms. Zoey Zimmer', '1' ),
+  ( 'Good Night', '', 'Ms. Zoey Zimmer', '1' );
 
 
 -- Theme Table
