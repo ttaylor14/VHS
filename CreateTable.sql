@@ -150,7 +150,6 @@ CREATE TABLE Customer_History
   CustomerID      INTEGER,
   MovieID         INTEGER,
   DatePurchased   Date,
-  ThemeID         INTEGER,
   Price           Real,
 
 
@@ -161,11 +160,6 @@ CREATE TABLE Customer_History
 
   CONSTRAINT MOVID_CustHist
 		FOREIGN KEY (MovieID) REFERENCES Movie(MovieID)
-			ON DELETE SET NULL		ON UPDATE CASCADE,
-
-
-  CONSTRAINT ThemeID_CustHist
-		FOREIGN KEY (ThemeID) REFERENCES Theme(ThemeID)
 			ON DELETE SET NULL		ON UPDATE CASCADE
 
 

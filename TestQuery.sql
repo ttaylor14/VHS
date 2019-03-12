@@ -1,2 +1,2 @@
 SELECT *
-FROM Billing;
+FROM Billing;vhsdb.database.windows.net
