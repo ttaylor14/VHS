@@ -7,7 +7,20 @@
 INSERT INTO Customer
   ( NameF, NameL, AddressLine1, AddressLine2, City, Zipcode, StateID, CountryID )
 VALUES
-  ( 'John', 'Smith', '123 Long Way', '', 'Nashville', '37011', '42', '188' );
+  ( 'John', 'Smith', '123 Long Way', '', 'Nashville', '37011', '42', '188' ),
+  ( 'Emily', 'Davis', '41 Avenue', '', 'Nashville', '37011', '42', '188' ),
+  ( 'Thomas', 'Townsley', '32 HopScotch', '', 'Nashville', '37011', '42', '188' ),
+  ( 'Todd', 'Taylor', '17 Thirty', '', 'Nashville', '37011', '42', '188' ),
+  ( 'John', 'Smith', '123 Long Way', '', 'Nashville', '37011', '15', '188' ),
+  ( 'Andrew', 'Long', '31 Toss', '', 'Nashville', '37011', '13', '188' ),
+  ( 'Mario', 'Cross', '1st Avenue', '', 'Nashville', '37011', '8', '188' ),
+  ( 'Samuel', 'Mann', '111 Trenton Road', '', 'Clarksville', '37028', '19', '188' ),
+  ( 'Sheep', 'Dog', '66 North Road', '', 'New York', '44530', '10', '188' ),
+  ( 'Sarah', 'Grimm', '15 Windmill Court', 'APT. B', 'Chicago', '31231', '6', '188' ),
+  ( 'Tim', 'Courage', '5th Row', '', 'Nashville', '37032', '31', '188' ),
+  ( 'Amy', 'Thompson', '1 Single Road', '', 'Knoxville', '31234', '41', '188' ),
+  ( 'Mike', 'Curtis', '7th Avenue', '', 'Nashville', '37015', '42', '188' ),
+  ( 'Jane', 'Doe', '1 Long Lost Puppy', '', 'Clarksville', '37040', '13', '188' );
 
 
 -- Membership Table
@@ -15,14 +28,40 @@ VALUES
 INSERT INTO Customer
   ( CustomerID, ThemeID, StartDate, EndDate, PricePYR, PricePMO )
 VALUES
-  ( '1', '1', '1', '1', '1.08', '15' );
+  ( '1', '1', '1', '2', '15.53', '1.08' ),
+  ( '2', '2', '1', '2', '10.08', '0.90' ),
+  ( '3', '1', '1', '2', '15.53', '1.08' ),
+  ( '4', '2', '1', '2', '10.08', '0.90' ),
+  ( '5', '1', '1', '2', '15.53', '1.08' ),
+  ( '6', '2', '1', '2', '10.08', '0.90' ),
+  ( '7', '1', '1', '2', '15.53', '1.08' ),
+  ( '8', '2', '1', '2', '10.08', '0.90' ),
+  ( '9', '1', '1', '2', '15.53', '1.08' ),
+  ( '10', '2', '1', '2', '10.08', '0.90' ),
+  ( '11', '1', '1', '2', '15.53', '1.08' ),
+  ( '12', '1', '1', '2', '15.53', '1.08' ),
+  ( '13', '2', '1', '2', '10.08', '0.90' ),
+  ( '14', '1', '1', '2', '15.53', '1.08' );
 
 -- Billing Table
 
 INSERT INTO Billing
   ( CustomerID, PaymentMethod, BillingCycle, PaymentStatus, CurrentBalance )
 VALUES
-  ( '1', 'VISA', '30', 'Active', '1.08' );
+  ( '1', 'VISA', '30', 'Active', '1.08' ),
+  ( '2', 'MasterCard', '30', 'Active', '10.28' ),
+  ( '3', 'VISA', '30', 'Active', '11.00' ),
+  ( '4', 'VISA', '30', 'Active', '0.19' ),
+  ( '5', 'Check', '30', 'Active', '82.13' ),
+  ( '6', 'VISA', '30', 'Active', '3.17' ),
+  ( '7', 'Check', '30', 'Closed', '0.00' ),
+  ( '8', 'VISA', '30', 'Active', '18.02' ),
+  ( '9', 'VISA', '30', 'Active', '12.30' ),
+  ( '10', 'VISA', '360', 'Active', '144.30' ),
+  ( '11', 'DEBIT', '30', 'Active', '5.70' ),
+  ( '12', 'DEBIT', '30', 'Active', '12.34' ),
+  ( '13', 'VISA', '30', 'Active', '14.56' ),
+  ( '14', 'VISA', '30', 'Active', '10.01' );
 
 
 
@@ -31,7 +70,18 @@ VALUES
 INSERT INTO Movie
   ( MovieName, ReleaseDate, MovieDirector, ThemeID )
 VALUES
-  ( 'VHS', '', 'Dr. Thomas', '1' );
+  ( 'VHS', '', 'Dr. Mark Thomas', '1' ),
+  ( 'Mr. Snake', '', 'Mr. Big Pillow', '3' ),
+  ( 'Captin Marvel', '', 'Mrs. Jane Smith', '10' ),
+  ( 'Shark Tank', '', 'Mrs. Carrie Underwood', '7' ),
+  ( 'Big Puppy', '', 'Mrs. Emily Smith', '7' ),
+  ( 'The Screaming Child', '', 'Mr. Thomas Mister', '7' ),
+  ( 'The Lost Keys', '', 'Mr. Curtis Glover', '5' ),
+  ( 'Kite Running Fast', '', 'Mr. Edison Franklin', '1' ),
+  ( 'Harry The King', '', 'Mr. Max Castle', '1' ),
+  ( 'Lost Chickens', '', 'Ms. Kindle Swift', '3' ),
+  ( 'Cast Away', '', 'Mrs. Kaylee Espinoza', '2' ),
+  ( 'Good Night', '', 'Ms. Zoey Zimmer', '1' ),
 
 
 -- Theme Table
@@ -72,7 +122,28 @@ VALUES
 INSERT INTO Customer_History
   ( CustomerID, MovieID, DatePurchased, ThemeID, Price )
 VALUES
-  ( '1', '1', '', '1', '1.08');
+  ( '1', '1', '', '1', '1.08'),
+  ( '1', '2', '', '1', '1.28'),
+  ( '1', '3', '', '1', '1.28'),
+  ( '1', '4', '', '1', '1.28'),
+  ( '2', '1', '', '1', '1.28'),
+  ( '2', '1', '', '1', '1.08'),
+  ( '2', '1', '', '1', '10.08'),
+  ( '3', '1', '', '1', '1.08'),
+  ( '1', '5', '', '1', '3.08'),
+  ( '1', '6', '', '1', '2.08'),
+  ( '6', '1', '', '1', '1.08'),
+  ( '3', '1', '', '1', '0.98'),
+  ( '5', '1', '', '1', '1.98'),
+  ( '7', '1', '', '1', '0.98'),
+  ( '8', '1', '', '1', '0.98'),
+  ( '9', '1', '', '1', '1.08'),
+  ( '10', '1', '', '1', '11.08'),
+  ( '11', '1', '', '1', '1.28'),
+  ( '12', '1', '', '1', '1.08'),
+  ( '13', '1', '', '1', '1.28'),
+  ( '14', '1', '', '1', '1.28'),
+  ( '12', '1', '', '1', '1.08');
 
 
 
