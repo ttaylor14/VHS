@@ -186,7 +186,7 @@ CREATE TABLE State_ID
   StateAbbreviation       varchar(2),
 
 	CONSTRAINT State_ID
-		PRIMARY KEY (StateID),
+		PRIMARY KEY (StateID)
 
 );
 
@@ -203,6 +203,6 @@ CREATE TABLE Country_ID
   CountryName       varchar(50),
 
 	CONSTRAINT Country_ID
-		PRIMARY KEY (CountryID),
+		PRIMARY KEY (CountryID)
 
 );

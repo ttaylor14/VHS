@@ -11,6 +11,30 @@
             "port": null,
             "server": "vhsdb.database.windows.net",
             "username": "admin1"
+        },
+        {
+            "askForPassword": false,
+            "connectionTimeout": 30,
+            "database": "vhs",
+            "dialect": "MSSQL",
+            "domain": null,
+            "name": "VHSDB2",
+            "password": "2dkZ69jwy6G8bML3",
+            "port": 1433,
+            "server": "vhsdb.database.windows.net",
+            "username": "Todd"
+        },
+        {
+            "askForPassword": false,
+            "connectionTimeout": 30,
+            "database": "vhs",
+            "dialect": "MSSQL",
+            "domain": null,
+            "name": "VHSADMIN",
+            "password": "HeckinGood!",
+            "port": 1433,
+            "server": "vhsdb.database.windows.net",
+            "username": "admin1"
         }
     ]
 }
