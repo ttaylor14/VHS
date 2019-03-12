@@ -1,4 +1,7 @@
 
+--Insert Test Data into Database
+
+
 -- Customer Table
 
 INSERT INTO Customer
@@ -14,6 +17,62 @@ INSERT INTO Customer
 VALUES
   ( '1', '1', '1', '1', '1.08', '15' );
 
+-- Billing Table
+
+INSERT INTO Billing
+  ( CustomerID, PaymentMethod, BillingCycle, PaymentStatus, CurrentBalance )
+VALUES
+  ( '1', 'VISA', '30', 'Active', '1.08' );
+
+
+
+-- Movie Table
+
+INSERT INTO Movie
+  ( MovieName, ReleaseDate, MovieDirector, ThemeID )
+VALUES
+  ( 'VHS', '', 'Dr. Thomas', '1' );
+
+
+-- Theme Table
+
+INSERT INTO Theme
+  ( ThemeName )
+VALUES
+  ( 'Absurdist/surreal/whimsical'),
+  ( 'Action'),
+  ( 'Adventure'),
+  ( 'Comedy'),
+  ( 'Crime'),
+  ( 'Drama'),
+  ( 'Fantasy'),
+  ( 'Historical'),
+  ( 'Historical fiction'),
+  ( 'Horror'),
+  ( 'Magical realism'),
+  ( 'Mystery'),
+  ( 'Paranoid Fiction'),
+  ( 'Philosophical'),
+  ( 'Political'),
+  ( 'Romance'),
+  ( 'Saga'),
+  ( 'Satire'),
+  ( 'Science fiction'),
+  ( 'Social'),
+  ( 'Speculative'),
+  ( 'Thriller'),
+  ( 'Urban'),
+  ( 'Western'),
+  ( 'Animation');
+
+
+
+-- Customer_History Table
+
+INSERT INTO Customer_History
+  ( CustomerID, MovieID, DatePurchased, ThemeID, Price )
+VALUES
+  ( '1', '1', '', '1', '1.08');
 
 
 
