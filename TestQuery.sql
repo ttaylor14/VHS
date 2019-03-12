@@ -1,2 +1,2 @@
-select *
-From Billing
+SELECT *
+FROM Billing;
