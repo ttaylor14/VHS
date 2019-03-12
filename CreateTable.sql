@@ -1,6 +1,3 @@
-DELETE Customer;
-
-CREATE DATABASE VHS;
 
 --More things updated here in this SQL file.
 --Quite the structured language.
@@ -20,12 +17,12 @@ CREATE TABLE Customer
 	CONSTRAINT CUSTID
 		PRIMARY KEY (CustomerID),
 
-  CONSTRAINT State
-		FOREIGN KEY (StateID) REFERENCES State(StateID)
+  CONSTRAINT StateRef
+		FOREIGN KEY (StateID) REFERENCES State_ID(StateID)
 			ON DELETE SET NULL		ON UPDATE CASCADE,
 
-  CONSTRAINT Country
-		FOREIGN KEY (CountryID) REFERENCES State(CountryID)
+  CONSTRAINT CountryRef
+		FOREIGN KEY (CountryID) REFERENCES Country_ID(CountryID)
 			ON DELETE SET NULL		ON UPDATE CASCADE
 );
 
@@ -92,23 +89,23 @@ CREATE TABLE Customer_History
 );
 
 
-CREATE TABLE State
+CREATE TABLE State_ID
 (
   StateID                 INTEGER Unique,
   StateName               varchar(50),
   StateAbbreviation       varchar(2),
 
-	CONSTRAINT StateID
+	CONSTRAINT State_ID
 		PRIMARY KEY (StateID),
 
 );
 
-CREATE TABLE Country
+CREATE TABLE Country_ID
 (
   CountryID         INTEGER Unique,
   CountryName       varchar(50),
 
-	CONSTRAINT CountryID
+	CONSTRAINT Country_ID
 		PRIMARY KEY (CountryID),
 
 );
