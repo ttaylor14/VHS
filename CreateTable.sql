@@ -1,13 +1,16 @@
 --More things updated here in this SQL file.
 --Quite the structured language.
 
--- DROP TABLE Customer;
--- DROP TABLE Membership;
--- DROP TABLE Billing;
--- DROP TABLE Movie;
--- DROP TABLE Customer_History;
--- DROP TABLE State_ID;
--- DROP TABLE Country_ID;
+DROP TABLE Customer;
+DROP TABLE Membership;
+DROP TABLE Billing;
+DROP TABLE Movie;
+DROP TABLE Customer_History;
+DROP TABLE State_ID;
+DROP TABLE Country_ID;
+DROP TABLE Theme;
+
+
 
 
 CREATE TABLE Customer
@@ -21,17 +24,7 @@ CREATE TABLE Customer
   ZipCode         INTEGER, 
   StateID         INTEGER,  -- FK to StateID table
   CountryID       INTEGER,  -- FK to CountryID table
-
-  CONSTRAINT StateRef
-		FOREIGN KEY (StateID) REFERENCES State_ID(StateID)
-			ON DELETE SET NULL		ON UPDATE CASCADE,
-
-
-  CONSTRAINT CountryRef
-		FOREIGN KEY (CountryID) REFERENCES Country_ID(CountryID)
-			ON DELETE SET NULL		ON UPDATE CASCADE
-
-
+ 
 );
 
 CREATE TABLE Membership
@@ -43,7 +36,7 @@ CREATE TABLE Membership
   PricePYR        REAL,
   PricePMO        REAL,
 
-  CONSTRAINT CUSTID_Mem
+
 		FOREIGN KEY (CustomerID) REFERENCES Customer(CustomerID)
 			ON DELETE SET NULL		ON UPDATE CASCADE
 
@@ -58,7 +51,7 @@ CREATE TABLE Billing
   CurrentBalance  REAL,
 
 
-  CONSTRAINT CUSTID_Bill
+
 		FOREIGN KEY (CustomerID) REFERENCES Customer(CustomerID)
 			ON DELETE SET NULL		ON UPDATE CASCADE
 
@@ -72,9 +65,7 @@ CREATE TABLE Movie
   MovieDirector   varchar(50),
   ThemeID         INTEGER,  -- FK to Theme table
 
-  CONSTRAINT ThemeID_MOV
-		FOREIGN KEY (ThemeID) REFERENCES Theme(ThemeID)
-			ON DELETE SET NULL		ON UPDATE CASCADE
+
 
 
 );
@@ -86,15 +77,6 @@ CREATE TABLE Customer_History
   DatePurchased   Date,
   ThemeID         INTEGER,  -- FK to Theme table
   Price           Real,
-
-  CONSTRAINT MOVID_CustHist
-		FOREIGN KEY (MovieID) REFERENCES Movie(MovieID)
-			ON DELETE SET NULL		ON UPDATE CASCADE,
-
-
-  CONSTRAINT ThemeID_CustHist
-		FOREIGN KEY (ThemeID) REFERENCES Movie(ThemeID)
-			ON DELETE SET NULL		ON UPDATE CASCADE
 
 
 );
