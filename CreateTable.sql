@@ -110,13 +110,13 @@ CREATE TABLE State_ID
 (
   StateID                 INTEGER PRIMARY KEY,
   StateName               varchar(50),
-  StateAbbreviation       varchar(2),
+  StateAbbreviation       varchar(2)
 
 );
 
 CREATE TABLE Country_ID
 (
   CountryID         INTEGER PRIMARY KEY,
-  CountryName       varchar(50),
+  CountryName       varchar(50)
 
 );
