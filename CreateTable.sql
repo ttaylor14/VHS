@@ -36,7 +36,7 @@ CREATE TABLE Customer
 
 CREATE TABLE Membership
 (
-  CustomerID      INTEGER,
+  CustomerID      INTEGER,  -- FK to Customer table
   ThemeID         INTEGER,
   StartDate       varchar(50),
   EndDate         varchar(50),
@@ -51,7 +51,7 @@ CREATE TABLE Membership
 
 CREATE TABLE Billing
 (
-  CustomerID      INTEGER,
+  CustomerID      INTEGER,  -- FK to Customer table
   PaymentMethod   varchar(50),
   BillingCycle    varchar(50),
   PaymentStatus   varchar(50),
@@ -70,7 +70,7 @@ CREATE TABLE Movie
   MovieName       varchar(50),
   ReleaseDate     Date,
   MovieDirector   varchar(50),
-  ThemeID         INTEGER,
+  ThemeID         INTEGER,  -- FK to Theme table
 
   CONSTRAINT ThemeID_MOV
 		FOREIGN KEY (ThemeID) REFERENCES Theme(ThemeID)
@@ -82,9 +82,9 @@ CREATE TABLE Movie
 
 CREATE TABLE Customer_History
 (
-  MovieID         INTEGER,
+  MovieID         INTEGER,  -- FK to Movie table
   DatePurchased   Date,
-  ThemeID         INTEGER,
+  ThemeID         INTEGER,  -- FK to Theme table
   Price           Real,
 
   CONSTRAINT MOVID_CustHist
