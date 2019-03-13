@@ -3,6 +3,29 @@
 This is a project completed by Todd, Emily, and Thomas.
 Lipscomb University
 
+
+**************************
+HOW TO CONNECT TO AzureSQL
+and make updates to tables
+**************************
+
+-> Cmd+Shift+P to open command prompt
+-> MS SQL: Connect
+-> Create Connection Profile
+
+Enter this info in order: 
+-> vhsdb.database.windows.net
+-> VHS
+-> admin1
+-> HeckinGood!
+-> admin1
+
+This will allow you to connect to the actual VHS database and NOT just the master server.
+
+
+
+
+
 SQL Database Setup:
 
 1. Download mssql on VS Code if you haven't yet. You'll need this extension to edit SQL syntax and run queries on the database. 
