@@ -66,11 +66,16 @@ CREATE TABLE Billing
 
 CREATE TABLE Movie
 (
-  MovieID         INTEGER UNIQUE,
+  MovieID         INTEGER UNIQUE PRIMARY KEY,
   MovieName       varchar(50),
   ReleaseDate     Date,
   MovieDirector   varchar(50),
-  ThemeID         INTEGER PRIMARY KEY,
+  ThemeID         INTEGER,
+
+  CONSTRAINT ThemeID_MOV
+		FOREIGN KEY (ThemeID) REFERENCES Theme(ThemeID)
+			ON DELETE SET NULL		ON UPDATE CASCADE,
+
 
 );
 
@@ -94,6 +99,12 @@ CREATE TABLE Customer_History
 
 );
 
+CREATE TABLE Theme
+(
+  ThemeID                 INTEGER PRIMARY KEY,
+  ThemeName               varchar(50)
+
+);
 
 CREATE TABLE State_ID
 (
