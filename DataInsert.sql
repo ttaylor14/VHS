@@ -56,7 +56,7 @@ VALUES
   ( '6', 'VISA', '30', 'Active', '3.17' ),
   ( '7', 'Check', '30', 'Closed', '0.00' ),
   ( '8', 'VISA', '30', 'Active', '18.02' ),
-  ( '9', 'VISA', '30', 'Active', '12.30' ),ThemeIDThemeIDThemeID
+  ( '9', 'VISA', '30', 'Active', '12.30' ),
   ( '10', 'VISA', '360', 'Active', '144.30' ),
   ( '11', 'DEBIT', '30', 'Active', '5.70' ),
   ( '12', 'DEBIT', '30', 'Active', '12.34' ),
