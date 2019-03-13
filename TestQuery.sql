@@ -2,25 +2,22 @@
 -- Sample Queries
 
 
-
-
 -- Customer List
 
-SELECT NameF, NameL, 
+SELECT NameF, NameL 
 FROM Customer;
 
 
 -- Customer Current Balance
 
-SELECT C.NameF, C.NameL, C.CurrentBalance
+SELECT C.NameF, C.NameL, B.CurrentBalance
 FROM Billing AS B, Customer AS C
 WHERE B.CustomerID = C.CustomerID;
 
 
--- Movie List by ThemeID
+-- Movie List by ThemeID = 1
 
-SELECT M.MovieName, M.MovieDirector, M.Release Date, T.Theme
+SELECT  T.ThemeName, M.MovieName, M.MovieDirector, M.ReleaseDate
 FROM Movie AS M, Theme AS T
-WHERE B.CustomerID 
-GROUP BY ThemeID;
+WHERE T.ThemeID = '1';
 

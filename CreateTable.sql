@@ -1,15 +1,14 @@
 --More things updated here in this SQL file.
 --Quite the structured language.
 
-DROP TABLE Customer;
-DROP TABLE Membership;
-DROP TABLE Billing;
-DROP TABLE Movie;
-DROP TABLE Customer_History;
-DROP TABLE State_ID;
-DROP TABLE Country_ID;
-DROP TABLE Theme;
-
+-- DROP TABLE Customer;
+-- DROP TABLE Membership;
+-- DROP TABLE Billing;
+-- DROP TABLE Movie;
+-- DROP TABLE Customer_History;
+-- DROP TABLE State_ID;
+-- DROP TABLE Country_ID;
+-- DROP TABLE Theme;
 
 
 
@@ -26,6 +25,7 @@ CREATE TABLE Customer
   CountryID       INTEGER,  -- FK to CountryID table
  
 );
+
 
 CREATE TABLE Membership
 (
@@ -49,11 +49,6 @@ CREATE TABLE Billing
   BillingCycle    varchar(50),
   PaymentStatus   varchar(50),
   CurrentBalance  REAL,
-
-
-
-		FOREIGN KEY (CustomerID) REFERENCES Customer(CustomerID)
-			ON DELETE SET NULL		ON UPDATE CASCADE
 
 );
 
