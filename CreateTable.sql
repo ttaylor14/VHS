@@ -66,7 +66,7 @@ CREATE TABLE Billing
 
 CREATE TABLE Movie
 (
-  MovieID         INTEGER UNIQUE PRIMARY KEY,
+  MovieID         INTEGER PRIMARY KEY,
   MovieName       varchar(50),
   ReleaseDate     Date,
   MovieDirector   varchar(50),
