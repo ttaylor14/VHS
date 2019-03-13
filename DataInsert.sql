@@ -7,25 +7,25 @@
 INSERT INTO Customer
   ( NameF, NameL, AddressLine1, AddressLine2, City, Zipcode, StateID, CountryID )
 VALUES
-  ( 'John', 'Smith', '123 Long Way', '', 'Nashville', '37011', '42', '188' ),
-  ( 'Emily', 'Davis', '41 Avenue', '', 'Nashville', '37011', '42', '188' ),
-  ( 'Thomas', 'Townsley', '32 HopScotch', '', 'Nashville', '37011', '42', '188' ),
-  ( 'Todd', 'Taylor', '17 Thirty', '', 'Nashville', '37011', '42', '188' ),
-  ( 'John', 'Smith', '123 Long Way', '', 'Nashville', '37011', '15', '188' ),
-  ( 'Andrew', 'Long', '31 Toss', '', 'Nashville', '37011', '13', '188' ),
-  ( 'Mario', 'Cross', '1st Avenue', '', 'Nashville', '37011', '8', '188' ),
-  ( 'Samuel', 'Mann', '111 Trenton Road', '', 'Clarksville', '37028', '19', '188' ),
-  ( 'Sheep', 'Dog', '66 North Road', '', 'New York', '44530', '10', '188' ),
+  ( 'John', 'Smith', '123 Long Way', ' ', 'Nashville', '37011', '42', '188' ),
+  ( 'Emily', 'Davis', '41 Avenue', ' ', 'Nashville', '37011', '42', '188' ),
+  ( 'Thomas', 'Townsley', '32 HopScotch', ' ', 'Nashville', '37011', '42', '188' ),
+  ( 'Todd', 'Taylor', '17 Thirty', ' ', 'Nashville', '37011', '42', '188' ),
+  ( 'John', 'Smith', '123 Long Way', ' ', 'Nashville', '37011', '15', '188' ),
+  ( 'Andrew', 'Long', '31 Toss', ' ', 'Nashville', '37011', '13', '188' ),
+  ( 'Mario', 'Cross', '1st Avenue', ' ', 'Nashville', '37011', '8', '188' ),
+  ( 'Samuel', 'Mann', '111 Trenton Road', ' ', 'Clarksville', '37028', '19', '188' ),
+  ( 'Sheep', 'Dog', '66 North Road', ' ', 'New York', '44530', '10', '188' ),
   ( 'Sarah', 'Grimm', '15 Windmill Court', 'APT. B', 'Chicago', '31231', '6', '188' ),
-  ( 'Tim', 'Courage', '5th Row', '', 'Nashville', '37032', '31', '188' ),
-  ( 'Amy', 'Thompson', '1 Single Road', '', 'Knoxville', '31234', '41', '188' ),
-  ( 'Mike', 'Curtis', '7th Avenue', '', 'Nashville', '37015', '42', '188' ),
-  ( 'Jane', 'Doe', '1 Long Lost Puppy', '', 'Clarksville', '37040', '13', '188' );
+  ( 'Tim', 'Courage', '5th Row', ' ', 'Nashville', '37032', '31', '188' ),
+  ( 'Amy', 'Thompson', '1 Single Road', ' ', 'Knoxville', '31234', '41', '188' ),
+  ( 'Mike', 'Curtis', '7th Avenue', ' ', 'Nashville', '37015', '42', '188' ),
+  ( 'Jane', 'Doe', '1 Long Lost Puppy', ' ', 'Clarksville', '37040', '13', '188' );
 
 
 -- Membership Table
 
-INSERT INTO Customer
+INSERT INTO Membership
   ( CustomerID, ThemeID, StartDate, EndDate, PricePYR, PricePMO )
 VALUES
   ( '1', '1', '1', '2', '15.53', '1.08' ),
@@ -56,7 +56,7 @@ VALUES
   ( '6', 'VISA', '30', 'Active', '3.17' ),
   ( '7', 'Check', '30', 'Closed', '0.00' ),
   ( '8', 'VISA', '30', 'Active', '18.02' ),
-  ( '9', 'VISA', '30', 'Active', '12.30' ),
+  ( '9', 'VISA', '30', 'Active', '12.30' ),ThemeIDThemeIDThemeID
   ( '10', 'VISA', '360', 'Active', '144.30' ),
   ( '11', 'DEBIT', '30', 'Active', '5.70' ),
   ( '12', 'DEBIT', '30', 'Active', '12.34' ),
@@ -70,18 +70,18 @@ VALUES
 INSERT INTO Movie
   ( MovieName, ReleaseDate, MovieDirector, ThemeID )
 VALUES
-  ( 'VHS', '', 'Dr. Mark Thomas', '1' ),
-  ( 'Mr. Snake', '', 'Mr. Big Pillow', '3' ),
-  ( 'Captin Marvel', '', 'Mrs. Jane Smith', '10' ),
-  ( 'Shark Tank', '', 'Mrs. Carrie Underwood', '7' ),
-  ( 'Big Puppy', '', 'Mrs. Emily Smith', '7' ),
-  ( 'The Screaming Child', '', 'Mr. Thomas Mister', '7' ),
-  ( 'The Lost Keys', '', 'Mr. Curtis Glover', '5' ),
-  ( 'Kite Running Fast', '', 'Mr. Edison Franklin', '1' ),
-  ( 'Harry The King', '', 'Mr. Max Castle', '1' ),
-  ( 'Lost Chickens', '', 'Ms. Kindle Swift', '3' ),
-  ( 'Cast Away', '', 'Mrs. Kaylee Espinoza', '2' ),
-  ( 'Good Night', '', 'Ms. Zoey Zimmer', '1' );
+  ( 'VHS', '20100618 10:34:09 AM', 'Dr. Mark Thomas', '1' ),
+  ( 'Mr. Snake', '20110618 10:34:09 AM', 'Mr. Big Pillow', '3' ),
+  ( 'Captin Marvel', '20120618 10:34:09 AM', 'Mrs. Jane Smith', '10' ),
+  ( 'Shark Tank', '20120618 10:34:09 AM', 'Mrs. Carrie Underwood', '7' ),
+  ( 'Big Puppy', '20150618 10:34:09 AM', 'Mrs. Emily Smith', '7' ),
+  ( 'The Screaming Child', '20140618 10:34:09 AM', 'Mr. Thomas Mister', '7' ),
+  ( 'The Lost Keys', '20120618 10:34:09 AM', 'Mr. Curtis Glover', '5' ),
+  ( 'Kite Running Fast', '20140618 10:34:09 AM', 'Mr. Edison Franklin', '1' ),
+  ( 'Harry The King', '20180618 10:34:09 AM', 'Mr. Max Castle', '1' ),
+  ( 'Lost Chickens', '20170618 10:34:09 AM', 'Ms. Kindle Swift', '3' ),
+  ( 'Cast Away', '20160618 10:34:09 AM', 'Mrs. Kaylee Espinoza', '2' ),
+  ( 'Good Night', '20120618 10:34:09 AM', 'Ms. Zoey Zimmer', '1' );
 
 
 -- Theme Table
@@ -122,28 +122,28 @@ VALUES
 INSERT INTO Customer_History
   ( CustomerID, MovieID, DatePurchased, Price )
 VALUES
-  ( '1', '1', '', '1.08'),
-  ( '1', '2', '', '1.28'),
-  ( '1', '3', '', '1.28'),
-  ( '1', '4', '', '1.28'),
-  ( '2', '1', '', '1.28'),
-  ( '2', '1', '', '1.08'),
-  ( '2', '1', '', '10.08'),
-  ( '3', '1', '', '1.08'),
-  ( '1', '5', '', '3.08'),
-  ( '1', '6', '', '2.08'),
-  ( '6', '1', '', '1.08'),
-  ( '3', '1', '', '0.98'),
-  ( '5', '1', '', '1.98'),
-  ( '7', '1', '', '0.98'),
-  ( '8', '1', '', '0.98'),
-  ( '9', '1', '', '1.08'),
-  ( '10', '1', '', '11.08'),
-  ( '11', '1', '', '1.28'),
-  ( '12', '1', '', '1.08'),
-  ( '13', '1', '', '1.28'),
-  ( '14', '1', '', '1.28'),
-  ( '12', '1', '', '1.08');
+  ( '1', '1', '20100618 10:34:09 AM', '1.08'),
+  ( '1', '2', '20100618 10:34:09 AM', '1.28'),
+  ( '1', '3', '20120618 10:34:09 AM', '1.28'),
+  ( '1', '4', '20110618 10:34:09 AM', '1.28'),
+  ( '2', '1', '20110618 10:34:09 AM', '1.28'),
+  ( '2', '1', '20140618 10:34:09 AM', '1.08'),
+  ( '2', '1', '20160618 10:34:09 AM', '10.08'),
+  ( '3', '1', '20150618 10:34:09 AM', '1.08'),
+  ( '1', '5', '20150618 10:34:09 AM', '3.08'),
+  ( '1', '6', '20150618 10:34:09 AM', '2.08'),
+  ( '6', '1', '20120618 10:34:09 AM', '1.08'),
+  ( '3', '1', '20120618 10:34:09 AM', '0.98'),
+  ( '5', '1', '20140618 10:34:09 AM', '1.98'),
+  ( '7', '1', '20100618 10:34:09 AM', '0.98'),
+  ( '8', '1', '20180618 10:34:09 AM', '0.98'),
+  ( '9', '1', '20160618 10:34:09 AM', '1.08'),
+  ( '10', '1', '20120618 10:34:09 AM', '11.08'),
+  ( '11', '1', '20140618 10:34:09 AM', '1.28'),
+  ( '12', '1', '20140618 10:34:09 AM', '1.08'),
+  ( '13', '1', '20130618 10:34:09 AM', '1.28'),
+  ( '14', '1', '20180618 10:34:09 AM', '1.28'),
+  ( '12', '1', '20150618 10:34:09 AM', '1.08');
 
 
 
@@ -298,7 +298,7 @@ VALUES
   ('Iraq'),
   ('Israel'),
   ('Italy'),
-  ("Ivory Coast (Cote d'Ivoire)"),
+  ('Ivory Coast (Cote d Ivoire)'),
   ('Jamaica'),
   ('Japan'),
   ('Jordan'),

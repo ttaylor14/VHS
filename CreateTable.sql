@@ -14,7 +14,7 @@
 
 CREATE TABLE Customer
 (
-  CustomerID      INTEGER PRIMARY KEY,
+  CustomerID      INTEGER PRIMARY KEY IDENTITY (1,1),
   NameF           varchar(50),
   NameL           varchar(50),
   AddressLine1    varchar(255), 
@@ -54,7 +54,7 @@ CREATE TABLE Billing
 
 CREATE TABLE Movie
 (
-  MovieID         INTEGER PRIMARY KEY,
+  MovieID         INTEGER PRIMARY KEY IDENTITY (1,1),
   MovieName       varchar(50),
   ReleaseDate     Date,
   MovieDirector   varchar(50),
@@ -68,6 +68,7 @@ CREATE TABLE Movie
 
 CREATE TABLE Customer_History
 (
+  CustomerID         INTEGER,  -- FK to Customer table
   MovieID         INTEGER,  -- FK to Movie table
   DatePurchased   Date,
   ThemeID         INTEGER,  -- FK to Theme table
@@ -78,14 +79,14 @@ CREATE TABLE Customer_History
 
 CREATE TABLE Theme
 (
-  ThemeID                 INTEGER PRIMARY KEY,
+  ThemeID                 INTEGER PRIMARY KEY IDENTITY (1,1),
   ThemeName               varchar(50)
 
 );
 
 CREATE TABLE State_ID
 (
-  StateID                 INTEGER PRIMARY KEY,
+  StateID                 INTEGER PRIMARY KEY IDENTITY (1,1),
   StateName               varchar(50),
   StateAbbreviation       varchar(2)
 
@@ -93,7 +94,7 @@ CREATE TABLE State_ID
 
 CREATE TABLE Country_ID
 (
-  CountryID         INTEGER PRIMARY KEY,
+  CountryID         INTEGER PRIMARY KEY IDENTITY (1,1),
   CountryName       varchar(50)
 
 );
