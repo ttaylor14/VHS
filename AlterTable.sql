@@ -1,0 +1,23 @@
+ALTER TABLE Customer
+ADD FOREIGN KEY (StateID) REFERENCES State_ID(StateID);
+
+ALTER TABLE Customer
+ADD FOREIGN KEY (CountryID) REFERENCES Country_ID(CountryID);
+
+ALTER TABLE Membership
+ADD FOREIGN KEY (CustomerID) REFERENCES Customer(CustomerID);
+
+ALTER TABLE Billing
+ADD FOREIGN KEY (CustomerID) REFERENCES Customer(CustomerID);
+
+ALTER TABLE Movie
+ADD FOREIGN KEY (ThemeID) REFERENCES Theme(ThemeID);
+
+ALTER TABLE Customer_History
+ADD FOREIGN KEY (CustomerID) REFERENCES Customer(CustomerID);
+
+ALTER TABLE Customer_History
+ADD FOREIGN KEY (MovieID) REFERENCES Movie(MovieID);
+
+ALTER TABLE Customer_History
+ADD FOREIGN KEY (ThemeID) REFERENCES Theme(ThemeID);
