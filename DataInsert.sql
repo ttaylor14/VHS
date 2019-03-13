@@ -1,26 +1,20 @@
-
---Insert Test Data into Database
-
-
--- Customer Table
-
 INSERT INTO Customer
   ( NameF, NameL, AddressLine1, AddressLine2, City, Zipcode, StateID, CountryID )
 VALUES
-  ( 'John', 'Smith', '123 Long Way', ' ', 'Nashville', '37011', '42', '188' ),
-  ( 'Emily', 'Davis', '41 Avenue', ' ', 'Nashville', '37011', '42', '188' ),
-  ( 'Thomas', 'Townsley', '32 HopScotch', ' ', 'Nashville', '37011', '42', '188' ),
-  ( 'Todd', 'Taylor', '17 Thirty', ' ', 'Nashville', '37011', '42', '188' ),
-  ( 'John', 'Smith', '123 Long Way', ' ', 'Nashville', '37011', '15', '188' ),
-  ( 'Andrew', 'Long', '31 Toss', ' ', 'Nashville', '37011', '13', '188' ),
-  ( 'Mario', 'Cross', '1st Avenue', ' ', 'Nashville', '37011', '8', '188' ),
-  ( 'Samuel', 'Mann', '111 Trenton Road', ' ', 'Clarksville', '37028', '19', '188' ),
-  ( 'Sheep', 'Dog', '66 North Road', ' ', 'New York', '44530', '10', '188' ),
-  ( 'Sarah', 'Grimm', '15 Windmill Court', 'APT. B', 'Chicago', '31231', '6', '188' ),
-  ( 'Tim', 'Courage', '5th Row', ' ', 'Nashville', '37032', '31', '188' ),
+  ( 'John', 'Smith', '123 Long Way', ' ', 'Nashville', '37011', '41', '188' ),
+  ( 'Emily', 'Davis', '41 Avenue', ' ', 'Nashville', '37011', '41', '188' ),
+  ( 'Thomas', 'Townsley', '32 HopScotch', ' ', 'Nashville', '37011', '41', '188' ),
+  ( 'Todd', 'Taylor', '17 Thirty', ' ', 'Nashville', '37011', '41', '188' ),
+  ( 'John', 'Smith', '123 Long Way', ' ', 'Nashville', '37011', '41', '188' ),
+  ( 'Andrew', 'Long', '31 Toss', ' ', 'Nashville', '37011', '41', '188' ),
+  ( 'Mario', 'Cross', '1st Avenue', ' ', 'Nashville', '37011', '41', '188' ),
+  ( 'Samuel', 'Mann', '111 Trenton Road', ' ', 'Clarksville', '37028', '41', '188' ),
+  ( 'Sheep', 'Dog', '66 North Road', ' ', 'New York', '44530', '31', '188' ),
+  ( 'Sarah', 'Grimm', '15 Windmill Court', 'APT. B', 'Chicago', '31231', '12', '188' ),
+  ( 'Tim', 'Courage', '5th Row', ' ', 'Nashville', '37032', '41', '188' ),
   ( 'Amy', 'Thompson', '1 Single Road', ' ', 'Knoxville', '31234', '41', '188' ),
-  ( 'Mike', 'Curtis', '7th Avenue', ' ', 'Nashville', '37015', '42', '188' ),
-  ( 'Jane', 'Doe', '1 Long Lost Puppy', ' ', 'Clarksville', '37040', '13', '188' );
+  ( 'Mike', 'Curtis', '7th Avenue', ' ', 'Nashville', '37015', '41', '188' ),
+  ( 'Jane', 'Doe', '1 Long Lost Puppy', ' ', 'Clarksville', '37040', '41', '188' );
 
 
 -- Membership Table
@@ -149,66 +143,67 @@ VALUES
 
 
   -- STATE Table
+SET IDENTITY_INSERT State_ID ON
 
-INSERT INTO State
-  (  StateName, StateAbbreviation )
+INSERT INTO State_ID
+  (StateID,  StateName, StateAbbreviation )
 VALUES
-  ('Alabama', 'AL'),
-  ('Alaska', 'AK'),
-  ('Arizona', 'AZ'),
-  ('Arkansas', 'AR'),
-  ('California', 'CA'),
-  ('Colorado', 'CO'),
-  ('Connecticut', 'CT'),
-  ('Delaware', 'DE'),
-  ('Florida', 'FL'),
-  ('Georgia', 'GA'),
-  ('Hawaii', 'HI'),
-  ('Idaho', 'ID'),
-  ('Illinois', 'IL'),
-  ('Indiana', 'IN'),
-  ('Iowa', 'IA'),
-  ('Kansas', 'KS'),
-  ('Kentucky', 'KY'),
-  ('Louisiana', 'LA'),
-  ('Maine', 'ME'),
-  ('Maryland', 'MD'),
-  ('Massachusetts', 'MA'),
-  ('Michigan', 'MI'),
-  ('Minnesota', 'MN'),
-  ('Mississippi', 'MS'),
-  ('Missouri', 'MO'),
-  ('Montana', 'MT'),
-  ('Nebraska', 'NE'),
-  ('Nevada', 'NV'),
-  ('New Hampshire', 'NH'),
-  ('New Jersey', 'NJ'),
-  ('New Mexico', 'NM'),
-  ('New York', 'NY'),
-  ('North Carolina', 'NC'),
-  ('North Dakota', 'ND'),
-  ('Ohio', 'OH'),
-  ('Oklahoma', 'OK'),
-  ('Oregon', 'OR'),
-  ('Pennsylvania', 'PA'),
-  ('Rhode Island', 'RI'),
-  ('South Carolina', 'SC'),
-  ('South Dakota', 'SD'),
-  ('Tennessee', 'TN'),
-  ('Texas', 'TX'),
-  ('Utah', 'UT'),
-  ('Vermont', 'VT'),
-  ('Virginia', 'VA'),
-  ('Washington', 'WA'),
-  ('West Virginia', 'WV'),
-  ('Wisconsin', 'WI'),
-  ('Wyoming', 'WY');
+  ('0','Alabama', 'AL'),
+  ('1','Alaska', 'AK'),
+  ('2','Arizona', 'AZ'),
+  ('3','Arkansas', 'AR'),
+  ('4','California', 'CA'),
+  ('5','Colorado', 'CO'),
+  ('6','Connecticut', 'CT'),
+  ('7','Delaware', 'DE'),
+  ('8','Florida', 'FL'),
+  ('9','Georgia', 'GA'),
+  ('10','Hawaii', 'HI'),
+  ('11','Idaho', 'ID'),
+  ('12','Illinois', 'IL'),
+  ('13','Indiana', 'IN'),
+  ('14','Iowa', 'IA'),
+  ('15','Kansas', 'KS'),
+  ('16','Kentucky', 'KY'),
+  ('17','Louisiana', 'LA'),
+  ('18','Maine', 'ME'),
+  ('19','Maryland', 'MD'),
+  ('20','Massachusetts', 'MA'),
+  ('21','Michigan', 'MI'),
+  ('22','Minnesota', 'MN'),
+  ('23','Mississippi', 'MS'),
+  ('24','Missouri', 'MO'),
+  ('25','Montana', 'MT'),
+  ('26','Nebraska', 'NE'),
+  ('27','Nevada', 'NV'),
+  ('28','New Hampshire', 'NH'),
+  ('29','New Jersey', 'NJ'),
+  ('30','New Mexico', 'NM'),
+  ('31','New York', 'NY'),
+  ('32','North Carolina', 'NC'),
+  ('33','North Dakota', 'ND'),
+  ('34','Ohio', 'OH'),
+  ('35','Oklahoma', 'OK'),
+  ('36','Oregon', 'OR'),
+  ('37','Pennsylvania', 'PA'),
+  ('38','Rhode Island', 'RI'),
+  ('39','South Carolina', 'SC'),
+  ('40','South Dakota', 'SD'),
+  ('41','Tennessee', 'TN'),
+  ('42','Texas', 'TX'),
+  ('43','Utah', 'UT'),
+  ('44','Vermont', 'VT'),
+  ('45','Virginia', 'VA'),
+  ('46','Washington', 'WA'),
+  ('47','West Virginia', 'WV'),
+  ('48','Wisconsin', 'WI'),
+  ('49','Wyoming', 'WY');
 
 
   -- Country Table
 
 
-INSERT INTO Country
+INSERT INTO Country_ID
   (  CountryName )
 VALUES
   ('Afghanistan'),
