@@ -1,13 +1,13 @@
 --More things updated here in this SQL file.
 --Quite the structured language.
 
-DROP TABLE Customer;
-DROP TABLE Membership;
-DROP TABLE Billing;
-DROP TABLE Movie;
-DROP TABLE Customer_History;
-DROP TABLE State_ID;
-DROP TABLE Country_ID;
+-- DROP TABLE Customer;
+-- DROP TABLE Membership;
+-- DROP TABLE Billing;
+-- DROP TABLE Movie;
+-- DROP TABLE Customer_History;
+-- DROP TABLE State_ID;
+-- DROP TABLE Country_ID;
 
 
 CREATE TABLE Customer
